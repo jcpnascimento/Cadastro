@@ -1,55 +1,105 @@
 <div class="background">
-  <form class="formulario" action="cadastro">
+  <form class="formulario">
     <div class="Fundo">
       <h2 class="titulo">Nome e Sobrenome:</h2>
-
       <input
         class="input"
         placeholder="Nome e Sobrenome"
         type="text"
-        name="nome"
-        id="nomeuser"
+        formControlName="nome"
       />
+      <div
+        *ngIf="formulario.get('nome').invalid && formulario.get('nome').touched"
+      >
+        O nome é obrigatório.
+      </div>
 
       <h2 class="titulo">Email:</h2>
-
       <input
         class="input"
         placeholder="exemplo@dominio.com"
         type="email"
-        name="email"
-        id="mailuser"
+        formControlName="email"
       />
+      <div
+        *ngIf="
+          formulario.get('email').invalid && formulario.get('email').touched
+        "
+      >
+        O email é obrigatório.
+      </div>
+      <div
+        *ngIf="
+          formulario.get('email').errors?.email &&
+          formulario.get('email').touched
+        "
+      >
+        O email não é válido.
+      </div>
 
       <h2 class="titulo">Telefone:</h2>
-
       <input
         class="input"
         placeholder="(XX) XXXX - XXXX"
         type="text"
-        id="fone"
+        formControlName="telefone"
       />
+      <div
+        *ngIf="
+          formulario.get('telefone').invalid &&
+          formulario.get('telefone').touched
+        "
+      >
+        O telefone é obrigatório.
+      </div>
 
       <h2 class="titulo">Senha:</h2>
-
       <input
         class="input"
         type="password"
         placeholder="********"
-        name="Senha"
-        id="psw"
+        formControlName="senha"
       />
-      <br />
+      <div
+        *ngIf="
+          formulario.get('senha').invalid && formulario.get('senha').touched
+        "
+      >
+        A senha é obrigatória.
+      </div>
       <h2 class="titulo">Confirmar Senha:</h2>
-
       <input
         class="input"
         type="password"
         placeholder="********"
-        name="Senha"
-        id="psw2"
+        formControlName="confirmarSenha"
       />
-      <br />
+      <div
+        *ngIf="
+          formulario.get('confirmarSenha').invalid &&
+          formulario.get('confirmarSenha').touched
+        "
+      >
+        Confirmação de senha é obrigatória.
+      </div>
+      <div
+        *ngIf="
+          formulario.get('confirmarSenha').hasError('required') &&
+          formulario.get('confirmarSenha').touched
+        "
+      >
+        Confirmar senha é obrigatório.
+      </div>
+      <div
+        *ngIf="
+          formulario.get('confirmarSenha').value !==
+            formulario.get('senha').value &&
+          formulario.get('confirmarSenha').touched
+        "
+      >
+        As senhas não coincidem.
+      </div>
+
       <br />
       <button class="cadastrar" type="submit">Cadastrar</button>
       <br />
@@ -57,4 +107,3 @@
     </div>
   </form>
 </div>
-<router-outlet />
