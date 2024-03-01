@@ -1,9 +1,45 @@
 .background {
-    // background-image: url('../assets/gradient.jpg');
-    background-color: beige;
-    background-size: cover;
-    background-position: center; 
-    // height: 48vw; 
-    // width: 99vw; 
-  }
-  
+  background-image: url("../assets/gradient.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 47.6vw;
+  width: 98.5vw;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.Fundo {
+  background-color: rgba(250, 235, 215, 0.432);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.titulo {
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-justify: center;
+}
+
+.cadastrar {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #be0066;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  height: 40px;
+}
+
+.input {
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+}
