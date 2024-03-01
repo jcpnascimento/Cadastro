@@ -1,6 +1,21 @@
-# Cadastro
+# Página de Cadastro
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+
+# Descrição:
+
+Projeto para portfolio. Esta página de cadastro oferece uma interface intuitiva para os mantenedores de repositórios inserirem informações cruciais sobre seus projetos de forma organizada e atrativa
+
+# Tecnologias Utilizadas:
+
+* HTML/CSS
+* Markdown
+* TypeScript
+* Angular
+
+# Preview
+
+![Cadastro](./src/assets/CADASTRO.png)
 
 ## Development server
 
